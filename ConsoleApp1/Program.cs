@@ -16,39 +16,7 @@ namespace ConsoleApp1 {
 
             BeheerHuizen huisManager = new BeheerHuizen(new HuizenRepositoryEF());
             BeheerHuurders huurderManager = new BeheerHuurders(new HuurderRepositoryEF());
-            BeheerContracten contractManager = new BeheerContracten(new ContractenRepositoryEF());
-
-            //Voorbeeld van Tom
-            //Console.WriteLine("parkbeheer!");
-
-            //Park p = new("p2", "Binnenhoeve", "Gent");
-            //bh.VoegNieuwHuisToe("parklaan", 1, p);
-            //bh.VoegNieuwHuisToe("parklaan", 2, p);
-            //bh.VoegNieuwHuisToe("parklaan", 3, p);
-            //var x = bh.GeefHuis(1);
-            //x.ZetStraat("Kerkstraat");
-            //x.ZetNr(11);
-            //bh.UpdateHuis(x);
-            //bh.ArchiveerHuis(x);
-            ////Huis h1 = new Huis();
-            //ParkEF pdb = new("p1", "naam", "locatie");
-            //HuisEF hdb = new("straat", 5, true);
-            //hdb.Park = pdb;
-            //ctx.Huizen.Add(hdb);
-            //ctx.SaveChanges();
-            ////huurder
-            //bhuur.VoegNieuweHuurderToe("jos", new Contactgegevens("email1", "tel", "adres"));
-            //bhuur.VoegNieuweHuurderToe("jef", new Contactgegevens("email2", "tel", "adres"));
-
-            //Huurperiode hp = new(DateTime.Now, 10);
-            //Huurder h = new(2, "Jos", new Contactgegevens("email1", "tel", "adres"));
-            //p = new Park("p1", "Buitenhoeve", "Deinze");
-            //Huis huis = new(1, "Kerkstraat", 5, true, p);
-            //bc.MaakContract("c2", hp, h, huis);
-
-            //var y = bc.GeefContract("c2");
-            //var t = bh.GeefHuis(1);
-            //Console.WriteLine(t);            
+            BeheerContracten contractManager = new BeheerContracten(new ContractenRepositoryEF()); 
 
             for (int i = 0; i < 3; i++) {
                 Console.Clear();
