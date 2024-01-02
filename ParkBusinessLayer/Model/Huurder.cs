@@ -35,5 +35,9 @@ namespace ParkBusinessLayer.Model
             if (contactgegevens == null) throw new ParkException("Huurder zetcontactgegevens");
             Contactgegevens = contactgegevens;
         }
+
+        public override string ToString() {
+            return $"Gebruiker {Naam} met ID {Id}. \n  Contactgegevens: {Contactgegevens}";
+        }
     }
 }

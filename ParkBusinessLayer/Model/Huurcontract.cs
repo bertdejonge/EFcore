@@ -48,5 +48,9 @@ namespace ParkBusinessLayer.Model
         {
             return HashCode.Combine(Huurperiode, Huurder, Huis);
         }
+
+        public override string ToString() {
+            return $"Huurcontract met ID {Id}. \n Voor huis {Huis.Nr} met huurder {Huurder.Naam}. \n Voor {Huurperiode}.\n";
+        }
     }
 }

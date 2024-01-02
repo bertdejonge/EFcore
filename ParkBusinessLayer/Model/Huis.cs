@@ -43,7 +43,7 @@ namespace ParkBusinessLayer.Model
             if (huurcontract == null) throw new ParkException("voeghuurcontracttoe");
             if (_huurcontracten.ContainsKey(huurcontract.Huurder))
             {
-                if (_huurcontracten[huurcontract.Huurder].Contains(huurcontract)) throw new ParkException("voegcontracttoe");
+                if (_huurcontracten[huurcontract.Huurder].Contains(huurcontract)) throw new ParkException("Dit contract staat al geregistreerd ");
                 _huurcontracten[huurcontract.Huurder].Add(huurcontract);
             }
             else
@@ -90,5 +90,17 @@ namespace ParkBusinessLayer.Model
             if (id <= 0) throw new ParkException("zetid");
             Id = id;
         }
+
+        public override string ToString() {
+            string actief;
+            if(Actief) {
+                actief = "Actief";
+            } else {
+                actief = "Non-actief";
+            }
+            return $"{actief} huis {Id}, te {Straat} {Nr}, in {Park.Naam}";
+        }
+
+
     }
 }
